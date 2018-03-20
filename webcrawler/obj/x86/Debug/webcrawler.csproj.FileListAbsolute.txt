@@ -1,0 +1,11 @@
+/Users/homefolder/Gits/webcrawler/webcrawler/bin/Debug/webcrawler.exe
+/Users/homefolder/Gits/webcrawler/webcrawler/bin/Debug/webcrawler.pdb
+/Users/homefolder/Gits/webcrawler/webcrawler/bin/Debug/HtmlAgilityPack.dll
+/Users/homefolder/Gits/webcrawler/webcrawler/bin/Debug/nunit.framework.dll
+/Users/homefolder/Gits/webcrawler/webcrawler/bin/Debug/nunit.framework.pdb
+/Users/homefolder/Gits/webcrawler/webcrawler/bin/Debug/nunit.framework.xml
+/Users/homefolder/Gits/webcrawler/webcrawler/bin/Debug/HtmlAgilityPack.pdb
+/Users/homefolder/Gits/webcrawler/webcrawler/bin/Debug/HtmlAgilityPack.xml
+/Users/homefolder/Gits/webcrawler/webcrawler/obj/x86/Debug/webcrawler.csproj.CoreCompileInputs.cache
+/Users/homefolder/Gits/webcrawler/webcrawler/obj/x86/Debug/webcrawler.exe
+/Users/homefolder/Gits/webcrawler/webcrawler/obj/x86/Debug/webcrawler.pdb
