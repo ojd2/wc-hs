@@ -2,7 +2,7 @@
 The following program is a simple web crawler that leverages the [Task Parallel Library (TPL)](https://docs.microsoft.com/en-us/dotnet/standard/parallel-programming/task-based-asynchronous-programming#tasks-threads-and-culture). By using the Task() operation, the program executes asynchronously, fetching all of the hrefs of a given HTML page in batches, moving onto the next associated seed url concurrently. Reasons for using the TPL framework are in a bid to sustain thread processes for long periods of time, for any website may have thousands of given href tags. Therefore, when traversing through hundreds of href tags, the Task() operation provides a convenient way to run any number of arbitrary statements throughout a given iteration.
 
 ## Depth Level of Search
-Depending on the depth of search required, the code associated on line 112:
+Depending on the depth of search required, the code associated on line 110:
 
     var urls = doc.DocumentNode.SelectNodes("//a\[@href\]")  
     .Select(a => a.Attributes\["href"\].Value)  
