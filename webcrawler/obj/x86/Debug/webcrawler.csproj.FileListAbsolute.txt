@@ -9,3 +9,4 @@
 /Users/homefolder/Gits/webcrawler/webcrawler/obj/x86/Debug/webcrawler.csproj.CoreCompileInputs.cache
 /Users/homefolder/Gits/webcrawler/webcrawler/obj/x86/Debug/webcrawler.exe
 /Users/homefolder/Gits/webcrawler/webcrawler/obj/x86/Debug/webcrawler.pdb
+/Users/homefolder/Gits/webcrawler/webcrawler/obj/x86/Debug/webcrawler.csprojResolveAssemblyReference.cache
