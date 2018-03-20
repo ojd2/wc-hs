@@ -39,11 +39,21 @@ namespace webcrawler
         }
 
         [Test]
-        // Determine if mailto ca
+        // Determine if string matches:
         private void TestStringContains()
         {
             var mailto = "mailto:test@email.com";
             StringAssert.Contains("mailto", mailto);
+
+			var imgix = "imgix.net/venue";
+			StringAssert.Contains("imgix", imgix);
+
+			var blog = "hirespace.com/blog/";
+			StringAssert.Contains("blog", blog);
+
+			var searchTerm = "venue-search/Search?SearchTerm=test";
+			StringAssert.Contains("Search?SearchTerm", searchTerm);
+
         }
 
     }
