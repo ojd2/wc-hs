@@ -18,8 +18,11 @@ namespace webcrawler
 
         public static void Main(string[] args)
         {
+            // Seed Url:
             string seed = "https://hirespace.com/";
+            // Init Crawler:
             Crawler c = new Crawler();
+            // Start Thread on Seed:
             c.StartThreading(seed);
         }
     }

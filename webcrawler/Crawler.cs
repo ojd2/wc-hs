@@ -97,7 +97,7 @@ namespace webcrawler
             Console.Out.WriteLine(" Scanned: " + MainClass.LinkQueue.Count.ToString()
                                   + "\t Visited: " + MainClass.VisitedList.Count.ToString()
                                   + "\t" + "Now Parsing: " + visitedPage + "\n");
-            Console.Out.WriteLine("================================================================");
+            Console.Out.WriteLine("================================================================ \n");
             foreach (string link in QueueList)
             {
                 Console.WriteLine("Found url => " + link + "\n");
@@ -106,19 +106,25 @@ namespace webcrawler
 
         public void FetchHref(HtmlDocument doc)
         {
-			    // Init urls list & do NOT include externals or related:
-			    var urls = doc.DocumentNode.SelectNodes("//a[@href]")
-			                  .Select(a => a.Attributes["href"].Value)
-			                  .Where(href => !href.StartsWith("mailto:") // Skip Emails
-			                         && !href.Contains("imgix.net") // Skip imgix.net tags
-			                         && !href.Contains("#") // Skip # tags 
-			                         && !href.Contains("blog") // Skip blog (offsite)
-			                         && !href.Contains("Search?SearchTerm") // Search terms
-			)
-			.ToList();
+            // Init urls list & do NOT include externals or related.
+            // Depending on the level of DEPTH you want to search,
+            // you can remove the filters below:
+            var urls = doc.DocumentNode.SelectNodes("//a[@href]")
+                          .Select(a => a.Attributes["href"].Value)
+                          .Where(href =>
+                                 !href.StartsWith("mailto:") // Skip Emails
+                                 && !href.Contains("imgix.net") // Skip imgix.net tags
+                                 && !href.Contains("#") // Skip # tags 
+                                 && !href.Contains("blog") // Skip blog (offsite)
+                                 && !href.Contains("Search?SearchTerm") // Search terms
+                                 && !href.Contains("Venue-Finder") // Venue Finder
+                                 && !href.Contains("Spaces") // Venue Finder
+                                 && !href.Contains("Top") // Top
+        )
+        .ToList();
 
             // Make sure list is not empty:
-			if (urls == null ? true : (!urls.Any()))
+            if (urls == null ? true : (!urls.Any()))
             {
                 Console.Write("Invalid url found! \n");
             }
